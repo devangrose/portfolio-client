@@ -10,7 +10,7 @@ import PortfolioGrid from './Portfolio';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Home from './Home';
 
-const SCROLLHEIGHT = 100;
+const SCROLLHEIGHT = 150;
 const styles = {
   img: {
     width: '100%',
