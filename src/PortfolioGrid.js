@@ -35,7 +35,7 @@ const tileData = [
     img: img2048,
     alt: img2048alt,
     title: '2048 Clone',
-    url: '/2048',
+    url: 'https://devangrose.github.io/2048_clone/',
   },
   {
     img: 'https://i.ebayimg.com/images/g/8gwAAOSwywRaQLUI/s-l300.jpg',
@@ -71,7 +71,7 @@ class PortfolioGrid extends Component {
         <GridList cellHeight={200} spacing={18} className={classes.gridList}>
           {tileData.map(tile => (
             <GridListTile  className={classes.tile} key={tile.img} cols={tile.featured ? 2 : 1} rows={tile.featured ? 2 : 1}>
-              <Link to={tile.url}><img onMouseOver={(e) => this.handleHover(e,tile)} onMouseOut={(e) => this.handleHoverLeave(e,tile)} src={tile.img} alt={tile.title} /></Link>
+              <a href={tile.url}><img onMouseOver={(e) => this.handleHover(e,tile)} onMouseOut={(e) => this.handleHoverLeave(e,tile)} src={tile.img} alt={tile.title} /></a>
               <GridListTileBar
                 title={tile.title}
                 titlePosition="top"
