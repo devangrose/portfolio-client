@@ -45,7 +45,7 @@ const tileData = [
   {
     img: drumcircle,
     title: 'DrumCircle',
-    url: '/rover',
+    url: '/drumcircle',
   },
   {
     img: 'http://devangrose.me/img/profile.jpg',
@@ -57,7 +57,9 @@ const tileData = [
 
 class PortfolioGrid extends Component {
   handleHover = (e,tile) => {
-    e.target.src = tile.alt;
+    if (tile.alt){
+      e.target.src = tile.alt;
+    }
   } 
   handleHoverLeave = (e, tile) => {
     e.target.src = tile.img;
@@ -68,7 +70,7 @@ class PortfolioGrid extends Component {
       <Paper elevation={8} className={classes.root}>
         <GridList cellHeight={200} spacing={18} className={classes.gridList}>
           {tileData.map(tile => (
-            <GridListTile  className={classes.tile + ' hoverzoom'} key={tile.img} cols={tile.featured ? 2 : 1} rows={tile.featured ? 2 : 1}>
+            <GridListTile  className={classes.tile} key={tile.img} cols={tile.featured ? 2 : 1} rows={tile.featured ? 2 : 1}>
               <Link to={tile.url}><img onMouseOver={(e) => this.handleHover(e,tile)} onMouseOut={(e) => this.handleHoverLeave(e,tile)} src={tile.img} alt={tile.title} /></Link>
               <GridListTileBar
                 title={tile.title}
