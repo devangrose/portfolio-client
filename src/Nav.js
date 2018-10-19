@@ -48,6 +48,7 @@ function Navbar(props) {
           <Button color="inherit"><a href="#experience" color="inherit" className={classes.a}>Experience</a></Button>
           <Button color="inherit"><a href="#portfolio" color="inherit"className={classes.a}>Portfolio</a></Button>
           <Button color="inherit"><a href="#skills" color="inherit" className={classes.a}>Skills</a></Button>
+          <Button color="inherit"><a href="~/wdi/projects/portfolio-client/index.css" color="inherit" className={classes.a}>Resume</a></Button>
         </Toolbar>
       </AppBar>
     </div>

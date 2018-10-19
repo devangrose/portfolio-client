@@ -33,7 +33,7 @@ class ProfileCard extends Component {
   render(){
     const classes = this.props.classes;
     return (
-      <Paper elevation={8} className={classes.card}>
+      <Paper elevation={24} className={classes.card}>
         <Grid container spacing={16}>
           <Grid item md={4}>
             <img className={classes.img} src='http://devangrose.me/img/profile.jpg'/>
